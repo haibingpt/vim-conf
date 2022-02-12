@@ -1,3 +1,10 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  :exe '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+              \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  au VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
 " add at 2019-07-24 for  vim-plug
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
